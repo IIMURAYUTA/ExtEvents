@@ -100,11 +100,11 @@
             // if IL2CPP setting and OptimizeSpeed, emit generic types usage.
 #if UNITY_2021_2_OR_NEWER
             var codeGeneration =
-    #if UNITY_2022
+    //#if UNITY_2022
                 PlayerSettings.GetIl2CppCodeGeneration(NamedBuildTarget.FromBuildTargetGroup(EditorUserBuildSettings.selectedBuildTargetGroup));
-    #else
-                EditorUserBuildSettings.il2CppCodeGeneration;
-    #endif
+    //#else
+    //            EditorUserBuildSettings.il2CppCodeGeneration;
+    //#endif
 
             // listenerProperties will be initialized for sure here because we initialized inside an if statement that always runs if the scripting backend is IL2CPP.
             if (codeGeneration == Il2CppCodeGeneration.OptimizeSpeed)
